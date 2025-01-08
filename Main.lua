@@ -14,7 +14,7 @@ return x(Self, ...)
 end))
 starterGui:SetCore("SendNotification", {
     Title = "Harvox's IP Spoofer",
-    Text = "Ip Succesfully spoofed to: " getgenv().ipspoof
+    Text = "Ip Succesfully spoofed to: " .. getgenv().ipspoof
 })
 else
 starterGui:SetCore("SendNotification", {
