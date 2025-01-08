@@ -5,7 +5,8 @@ if hookmetamethod then
 local x;
 x= hookmetamethod(game, "__namecall", newcclosure(function(Self, ...)
 local args = {...}
-if getnamecallmethod() == "HttpGet" and Self == game then 
+local mm = getnamecallmethod()
+if (mm == "HttpGetAsync" or mm == "HttpGet" or mm == "HttpPost" or mm == "HttpPostAsync") and Self == game then 
 if typeof(args[1]) == 'string' and (string.find(string.lower(args[1]), "ip") or string.find(string.lower(args[1]), "v4")) then 
 return getgenv().ipspoof
 end
